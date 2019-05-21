@@ -14,7 +14,7 @@ import capas.tarea1.domain.Book;
 import capas.tarea1.service.LibraryService;
 
 @Controller
-@RequestMapping("/inventory")
+@RequestMapping("/show")
 public class InventoryController {
 	
 	@Autowired
@@ -36,11 +36,12 @@ public class InventoryController {
 		mav.addObject("countAuthors", countAuthors);
 		mav.addObject("countBooks", countBooks);
 		mav.addObject("bookList", bookList);
+		mav.addObject("filtering", false);
 		return mav;
 		
 	}
 	
-	@GetMapping("/search")
+	@GetMapping("/filter")
 	public ModelAndView showByAttribute(@RequestParam String attribute,@RequestParam String value) {
 		ModelAndView mav = new ModelAndView("inventory");
 		List<Book> bookList = null;
@@ -52,6 +53,7 @@ public class InventoryController {
 		mav.addObject("attribute", attribute);
 		mav.addObject("value", value);
 		mav.addObject("bookList", bookList);
+		mav.addObject("filtering", true);
 		return mav;
 	}
 }

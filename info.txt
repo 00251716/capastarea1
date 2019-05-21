@@ -1,0 +1,6 @@
+Kevin Alexander López Aquino 
+00251716
+
+Nombre de la base de datos: library
+Usuario de la base de datos: postgres
+Contraseña: sin contraseña

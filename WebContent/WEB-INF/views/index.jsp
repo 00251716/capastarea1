@@ -10,20 +10,27 @@
 <body>
 	
 	<div class="form-style-3">
-		<form action="${pageContext.request.contextPath}/" method="get">
+		<form action="${pageContext.request.contextPath}/show/filter" method="get">
 		
 		<fieldset><legend>Buscar por</legend>
-		<label for="field6"><span>ID<span class="required">*</span></span><input type="number" class="input-field" name="studentId" value="" /></label>
 		
-		<select name="choice">
-  		<option value="first">First Value</option> 
-  		<option value="second" selected>Second Value</option>
-  		<option value="third">Third Value</option>
-		</select>
+		<label>
+			<select name="attribute">
+  			<option value="author">Autor</option> 
+  			<option value="isbn" selected>ISBN</option>
+  			<option value="genre">Género</option>
+			</select>
+		</label>
 		
-		<label><span> </span><input type="submit" value="Enviar" /></label>
+		
+		<label for="field6"><input type="text" class="input-field" name="value" value="" required/></label>
+		
+		
+		<label><button type="submit"> Buscar </button> </label>
+		<label><span> </span><button type="button" onclick="location.href='${pageContext.request.contextPath}/show'">Ver todos</button></label>
 		</fieldset>
 		</form>
+
 	</div>	
 </body>
 </html>

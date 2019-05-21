@@ -1,13 +1,17 @@
 package capas.tarea1.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(schema = "public", name = "book")
 public class Book {
 
 	@Id
-	@Column(name="ISBN")
-	private String ISBN;
+	@Column(name="isbn")
+	private String isbn;
 	
 	@Column(name="title")
 	private String title;
@@ -21,12 +25,12 @@ public class Book {
 	@Column(name="quantity")
 	private int quantity;
 
-	public String getISBN() {
-		return ISBN;
+	public String getIsbn() {
+		return isbn;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setIsbn(String Isbn) {
+		isbn = Isbn;
 	}
 
 	public String getTitle() {
