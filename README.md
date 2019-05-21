@@ -2,4 +2,4 @@
 
 ![index.jsp](/imgs/index.png)
 
-![index.jsp](/imgs/inventory.png)
+![inventory.jsp](/imgs/inventory.png)
