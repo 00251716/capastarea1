@@ -5,8 +5,8 @@ Aplicación para consultar registros de biblioteca, desarrollada utilizando Spri
 Este repositorio contiene el backup para la base de datos de pruebas, con los siguientes detalles:
 
 > Nombre: library
-  Usuario: postgres
-  Contraseña: sin contraseña
+> Usuario: postgres
+> Contraseña: sin contraseña
 
 ![index.jsp](/imgs/index.png)
 
