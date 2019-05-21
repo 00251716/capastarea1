@@ -23,16 +23,20 @@ public class BookDAOImplementation implements BookDAO{
 		StringBuffer sb = new StringBuffer();
 		sb.append("select * from public.book");
 		Query query = entityManager.createNativeQuery(sb.toString(), Book.class);
-		List<Book> resulset = query.getResultList();
-		
-		return resulset;
+		List<Book> result = query.getResultList();
+		return result;
 	}
 
 
 	@Override
 	public List<Book> fetchByAttribute(String attribute, String value) throws DataAccessException {
 		
-		return null;
+		StringBuffer sb = new StringBuffer();
+		sb.append("SELECT * FROM book WHERE LOWER(").append(attribute).append(") LIKE LOWER(?1)");
+		Query query = entityManager.createNativeQuery(sb.toString(), Book.class);
+		query.setParameter(1, value);
+		List<Book> result = query.getResultList();
+		return result;
 	}
 	
 }
